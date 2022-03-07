@@ -144,6 +144,10 @@ public class AsciiPanel extends JPanel {
     public int getHeightInCharacters() {
         return heightInCharacters;
     }
+    
+    public void setHeightInCharacters(int height) {
+        this.heightInCharacters=height;
+    }
 
     /**
      * Gets the width in characters.
@@ -152,6 +156,10 @@ public class AsciiPanel extends JPanel {
      */
     public int getWidthInCharacters() {
         return widthInCharacters;
+    }
+
+    public void setWidthInCharacters(int width) {
+        this.widthInCharacters=width;
     }
 
     /**
