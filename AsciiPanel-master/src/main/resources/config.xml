@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="asciiPanel" class="asciiPanel.AsciiPanel">
+        <constructor-arg index="0" value="20"/>
+        <constructor-arg index="1" value="20"/>
+        <constructor-arg index="2" ref="asciiFont"/>
+    </bean>
+
+    <bean id="asciiFont" class="asciiPanel.AsciiFont">
+        <constructor-arg index="0" value="drake_10x10.png"/>
+        <constructor-arg index="1" value="10"/>
+        <constructor-arg index="2" value="10"/>
+    </bean>
+
+</beans>
