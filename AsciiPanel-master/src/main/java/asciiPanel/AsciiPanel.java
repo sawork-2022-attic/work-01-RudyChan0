@@ -12,6 +12,8 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  * This simulates a code page 437 ASCII terminal display.
  * @author Trystan Spangler
@@ -313,6 +315,7 @@ public class AsciiPanel extends JPanel {
      * @param height
      * @param font if passing null, standard font CP437_9x16 will be used
      */
+    @Autowired
     public AsciiPanel(int width, int height, AsciiFont font) {
         super();
 
