@@ -6,15 +6,24 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
+    <!-- setter -->
     <!-- <bean id="asciiPanel" class="asciiPanel.AsciiPanel" 
         p:heightInCharacters="20"
         p:widthInCharacters="20">
         <property name="asciiFont" ref="asciiFont"/>
     </bean> -->
-    <bean id="asciiPanel" class="asciiPanel.AsciiPanel">
+
+    <!-- constructor -->
+    <!-- <bean id="asciiPanel" class="asciiPanel.AsciiPanel">
         <constructor-arg index="0" value="20"/>
         <constructor-arg index="1" value="20"/>
         <constructor-arg index="2" ref="asciiFont"/>
+    </bean> -->
+
+    <!-- auto constructor -->
+    <bean id="asciiPanel" class="asciiPanel.AsciiPanel" autowire="constructor">
+        <constructor-arg index="0" value="20"/>
+        <constructor-arg index="1" value="20"/>
     </bean>
 
     <bean id="asciiFont" class="asciiPanel.AsciiFont"
