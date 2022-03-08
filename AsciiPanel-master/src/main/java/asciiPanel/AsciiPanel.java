@@ -267,6 +267,7 @@ public class AsciiPanel extends JPanel {
      * as the panel dimensions will most likely change
      * @param font
      */
+    @Autowired
     public void setAsciiFont(AsciiFont font)
     {
         if(this.asciiFont == font)
@@ -315,7 +316,7 @@ public class AsciiPanel extends JPanel {
      * @param height
      * @param font if passing null, standard font CP437_9x16 will be used
      */
-    @Autowired
+    //@Autowired
     public AsciiPanel(int width, int height, AsciiFont font) {
         super();
 
@@ -340,9 +341,9 @@ public class AsciiPanel extends JPanel {
         oldBackgroundColors = new Color[widthInCharacters][heightInCharacters];
         oldForegroundColors = new Color[widthInCharacters][heightInCharacters];
 
-        if(font == null) {
-        	font = AsciiFont.CP437_9x16;
-        }
+        // if(font == null) {
+        // 	font = AsciiFont.CP437_9x16;
+        // }
         setAsciiFont(font);
     }
     
